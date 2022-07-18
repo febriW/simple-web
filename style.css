@@ -1,13 +1,4 @@
-/* Base Color 
-    6E85B7
-    B2C8DF
-    C4D7E0
-*/
 @charset "UTF-8";
-
-@media screen and (max-width: 850px) {
-    /* enter code here */
-}
 
 .loader {
     position: fixed;
@@ -18,7 +9,7 @@
     z-index: 9999;
 }
 
-.loader > .loader-bg {
+.loader .loader-bg {
     position: absolute;
     top: 0;
     left: 0;
@@ -36,4 +27,28 @@
     transform: translate(-50%, -50%);
     width: 200px;
     height: 200px;
+}
+
+.main {
+    -webkit-transform: translate3d(0, 10px, 0);
+            transform: translate3d(0, 10px, 0);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    opacity: 0;
+}
+
+body.op-start .main {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    opacity: 1;
+    -webkit-transition: all 1.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 1.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+body.animation-finish .loader {
+    visibility: hidden;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    opacity: 0;
+    -webkit-transition: all 1s linear 1.6s;
+    transition: all 1s linear 1.6s;
 }
