@@ -15,5 +15,5 @@
 $(window).on('load', function(){
     setTimeout(function(){
         body.addClass('animation-finish')
-    },300)
+    },400)
 })

@@ -1,16 +1,23 @@
 'use strict';
 
 let body = $('body')
+let container = $('.container')
 
 $(function () {
-    body = $('body')
-})
+    LoadEvent()
+});
 
 $(window).on('load', function(){
     initload()
 })
 
 function initload(){
-    body.addClass('loaded')
-    body.addClass('opening-start')
+    body.addClass('ready')
+    body.addClass('animation-start')
+}
+
+function LoadEvent(){
+    body = $('body')
+    container = $('.container')
+    body.addClass('ready')
 }
