@@ -24,18 +24,52 @@
     margin: 0;
     padding: 0;
     display: inline;
+    padding: 0px 10px 0px 10px;
+}
+
+@keyframes filling-icon {
+    0% {
+        transform: translate(0, 150px);
+    }
+    100% {
+        transform: translate(0, -5px);
+    }
+}
+
+@keyframes wave {
+    0% {
+        transform: translate(-150px, 0);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.sns > li:hover a{
+    animation-name: filling-icon;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(.2, .6, .8, .4);;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.sns > li:hover .wave {
+    animation-name: wave;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 0.5s;
+    fill : #C4D7E0;
 }
 
 .sns > li .footer-icon {
     width: 40px;
     height: 40px;
-    padding: 0px 10px 0px 10px;
 }
 
 .sns > li > a {
-    text-decoration: inherit;
+    /* text-decoration: inherit; */
     color: inherit;
-    cursor: auto;
+    /* cursor: auto; */
 }
 
 .sns ol,ul {
