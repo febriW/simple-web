@@ -10,31 +10,54 @@
     position: fixed;
     z-index: 100;
     top: 0;
-    visibility: hidden;
-    width: 100%;
-    background-color: var(--color-3);
-    max-height: 150px;
     margin: 0;
+    width: 100%;
+    max-height: 150px;
+    align-items: center;
+    background-color: var(--color-3);
+    transition: all 0.4s;
+    transform: translateY(-200px);
 }
 
 body.menu-open .wrapper {
     visibility: visible;
-    opacity: 1;
     transition: all 0.4s;
-    transform: translateY(20px);
+    height: 100%;
+    transform: translateY(0px);
 }
 
 .grid {
     display: grid;
     gap: 1.3rem;
     text-align: center;
+    padding: 2rem 1.5rem 0;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.menu_item {
+    transition: all 0.1s;
+    transition-delay: 0.3s;
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
 }
+
+body.menu-open .menu_item {
+    opacity: 1;
+    transition: all 0.6s;
+    transform: translate3d(10px, 0, 0px);
+}
+
+body.menu-open .menu_item:nth-of-type(1) {
+    transition-delay: 0.4s;
+}
+
+body.menu-open .menu_item:nth-of-type(2) {
+    transition-delay: 0.5s;
+}
+
+body.menu-open .menu_item:nth-of-type(3) {
+    transition-delay: 0.6s;
+}
+
 
 /* Hamburger Button */
 .hamburger{
