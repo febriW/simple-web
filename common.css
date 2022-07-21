@@ -10,7 +10,7 @@
 /* css variable */
 :root {
 
-    --max-width: 1280px;
+    --max-width: auto;
     --max-width-2: 968px;
     --body-font: 'Source Sans Pro', sans-serif;
     /* Color */

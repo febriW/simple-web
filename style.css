@@ -5,6 +5,7 @@
     margin: auto;
 }
 
+/* Menu Navigation */
 .wrapper {
     max-width: var(--max-width-2);
     position: fixed;
