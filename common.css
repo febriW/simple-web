@@ -10,10 +10,13 @@
 /* css variable */
 :root {
 
-    --max-width: 968px;
+    --max-width: 1280px;
+    --max-width-2: 968px;
     --body-font: 'Source Sans Pro', sans-serif;
     /* Color */
     --body-color: #C4D7E0;
+    --color-2: #6E85B7;
+    --color-3: #B2C8DF;
     --text-color: hsl(250, 8%, 45%);
 
     /* Z Index */
@@ -30,6 +33,7 @@
     --mb-3: 3rem;
 }
 
+
 * {
     margin: 0;
     padding: 0;
@@ -44,18 +48,15 @@ body {
     background-color: var(--body-color);
 }
 
-.container {
-    opacity: 0;
-    max-width: 768px;
-    margin: auto;
-}
-
-ul {
+ol,ul {
     list-style: none;
 }
 
 a {
     text-decoration: none;
+    background: transparent;
+    font-size: 100%;
+    color: var(--text-color);
 }
 
 body.ready .container {
